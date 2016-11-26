@@ -13,7 +13,7 @@
 # limitations under the License.
 
 import os
-import http.client
+import http.client # only works on python3
 from flask import Flask, jsonify, render_template
 import json
 
@@ -67,4 +67,4 @@ def SayHello(name):
 
 port = os.getenv('PORT', '5000')
 if __name__ == "__main__":
-	app.run(host='0.0.0.0', port=int(port), debug=True)
+	app.run(host='0.0.0.0', port=int(port))
